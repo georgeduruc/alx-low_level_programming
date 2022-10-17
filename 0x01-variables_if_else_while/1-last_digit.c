@@ -3,24 +3,28 @@
 #include <time.h>
 
 /**
- * main - Entry
- * Return: Always 0
+ * main - Determines either greater than 5, is less than 6, or is 0
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int n;
-	int a;
+	int n, l;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	a = n % 10;
-
-	if (a > 5)
+	l = n % 10;
+	if (l > 5)
 	{
-		print("Last digit of %d is %d and is greater than 5\n", n, a);
+		print("Last digit of %d is %d and is greater than 5\n", n, l);
 	}
-	else if (a == 0)
+	else if (l == 0)
 	{
 		printf("Last digit of %d is %d and is 0\n", n, a);
 	}
-	return (0); }
+	else
+	{
+		print("Last digit of %d is %d and is less than 6 and not 0\n", n, 1);
+	}
+	return (0);
+}
